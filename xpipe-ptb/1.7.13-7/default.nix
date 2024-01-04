@@ -33,8 +33,8 @@ let
   }.${system} or throwSystem;
 
   hash = {
-    x86_64-linux = "sha256-VwBw6om53cKXFEdtoRWOdYJW7bPXfh+PBLyvbhOfmW8=";
-    aarch64-linux = "sha256-VwBw6om53cKXFEdtoRWOdYJW7bPXfh+PBLyvbhOfmW8=";
+    x86_64-linux = "sha256-cKbzwjzB0hJpU1lVIodgDmuv+Q3IvrtsaXY9CY5ANpQ=";
+    aarch64-linux = "";
   }.${system} or throwSystem;
 
   displayname = "XPipe PTB";
