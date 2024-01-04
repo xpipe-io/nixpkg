@@ -103,12 +103,12 @@ in stdenvNoCC.mkDerivation rec {
     mkdir -p "$out/etc/bash_completion.d"
     ln -s "$out/opt/$pkg/cli/xpipe_completion" "$out/etc/bash_completion.d/$pkg"
 
-    substituteInPlace $out/share/applications/${displayname}.desktop --replace "Exec=" "Exec=$out"
-    substituteInPlace $out/share/applications/${displayname}.desktop --replace "Icon=" "Icon=$out"
+    substituteInPlace "$out/share/applications/${displayname}.desktop" --replace "Exec=" "Exec=$out"
+    substituteInPlace "$out/share/applications/${displayname}.desktop" --replace "Icon=" "Icon=$out"
 
-    mv "$out/opt/xpipe/app/bin/xpiped" "$out/opt/xpipe/app/bin/xpiped_raw"
-    mv "$out/opt/xpipe/app/lib/app/xpiped.cfg" "$out/opt/xpipe/app/lib/app/xpiped_raw.cfg"
-    mv "$out/opt/xpipe/app/scripts/xpiped_debug.sh" "$out/opt/xpipe/app/scripts/xpiped_debug_raw.sh"
+    mv "$out/opt/$pkg/app/bin/xpiped" "$out/opt/$pkg/app/bin/xpiped_raw"
+    mv "$out/opt/$pkg/app/lib/app/xpiped.cfg" "$out/opt/$pkg/app/lib/app/xpiped_raw.cfg"
+    mv "$out/opt/$pkg/app/scripts/xpiped_debug.sh" "$out/opt/$pkg/app/scripts/xpiped_debug_raw.sh"
 
     makeShellWrapper "$out/opt/$pkg/app/bin/xpiped_raw" "$out/opt/$pkg/app/bin/xpiped" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ fontconfig gtk3 udev ]}"
