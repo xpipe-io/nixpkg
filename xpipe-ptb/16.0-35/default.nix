@@ -36,7 +36,7 @@ let
   }.${system} or throwSystem;
 
   hash = {
-    x86_64-linux = "sha256-7BhwPM5t2JHrJ6mqTErFHYWlQ4ELdmTCwcoCKKp+tvE=";
+    x86_64-linux = "sha256-zLMvA8Xa/Qznvg78Z8UsIT9NqCD6eerLnLf40TzR3sA=";
     aarch64-linux = "";
   }.${system} or throwSystem;
 
