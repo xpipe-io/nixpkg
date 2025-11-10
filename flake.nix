@@ -26,7 +26,7 @@
     in
     {
       defaultPackage = forAllSystems ({ system, ... }:
-          self.xpipe
+          xpipe
       );
     };
 }
