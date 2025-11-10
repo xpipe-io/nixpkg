@@ -21,7 +21,7 @@
         lib = pkgs.lib;
       });
 
-      packages = forAllSystems ({ system, ... }:
+      packages = forAllSystems ({ system, pkgs, ... }:
           pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { inherit system; }
       );
     in
