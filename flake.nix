@@ -27,7 +27,7 @@
       );
 
       defaultPackage = forAllSystems ({ system, ... }:
-          packages.${system}.xpipe
+          self.packages.${system}.xpipe
       );
     };
 }
