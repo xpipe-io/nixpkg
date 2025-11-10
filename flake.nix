@@ -14,6 +14,7 @@
       nameValuePair = name: value: { inherit name value; };
       genAttrs = names: f: builtins.listToAttrs (map (n: nameValuePair n (f n)) names);
       allSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      xpipe = pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { };
 
       forAllSystems = f: genAttrs allSystems (system: f rec {
         inherit system;
@@ -22,10 +23,6 @@
       });
     in
     {
-      packages = forAllSystems ({ system, pkgs, lib, ... }:
-          xpipe = pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { };
-        );
-
       defaultPackage = forAllSystems ({ system, ... }:
           self.packages.${system}.xpipe
       );
