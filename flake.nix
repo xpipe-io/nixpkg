@@ -8,6 +8,7 @@
   outputs =
     { self
     , nixpkgs
+    , system
     , ...
     } @ inputs:
     let
