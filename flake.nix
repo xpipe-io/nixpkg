@@ -25,14 +25,10 @@
       packages = forAllSystems
         ({ system, pkgs, lib, ... }:
           let
-            xpipeLib = pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { };
+            xpipe = pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { };
             sharedAttrs = {
             };
-          in
-          {
-            xpipe = xpipeLib.buildPackage
-              (sharedAttrs // { });
-          });
+        );
 
       defaultPackage = forAllSystems ({ system, ... }:
           self.packages.${system}.xpipe
