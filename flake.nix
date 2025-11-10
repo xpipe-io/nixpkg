@@ -20,14 +20,14 @@
         pkgs = import nixpkgs { inherit system; };
         lib = pkgs.lib;
       });
-
+    in
+    {
       packages = forAllSystems ({ system, pkgs, ... }:
           pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { inherit system; }
       );
-    in
-    {
+
       defaultPackage = forAllSystems ({ system, ... }:
-          packages.xpipe
+          packages.${system}.xpipe
       );
     };
 }
