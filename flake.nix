@@ -23,7 +23,7 @@
     in
     {
       packages = forAllSystems ({ system, pkgs, ... }:
-          pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { inherit system; }
+          pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { }
       );
 
       defaultPackage = forAllSystems ({ system, ... }:
