@@ -15,6 +15,7 @@
       genAttrs = names: f: builtins.listToAttrs (map (n: nameValuePair n (f n)) names);
       allSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
+      inherit system;
       pkgs = import nixpkgs { inherit system; };
       xpipe = pkgs.callPackage ./xpipe-ptb/19.0-16/default.nix { };
 
