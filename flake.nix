@@ -2,7 +2,7 @@
   description = "xpipe";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "nixpkgs";
   };
 
   outputs =
