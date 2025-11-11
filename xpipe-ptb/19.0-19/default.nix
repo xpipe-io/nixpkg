@@ -150,7 +150,8 @@ in stdenvNoCC.mkDerivation rec {
 
     mkdir -p "$out/Applications/${displayname}.app"
     cp -R . "$out/Applications/${displayname}.app"
-    ln -s "$out/Applications/${displayname}.app/Contents/MacOS/xpipe" "$out/bin/${displayname}"
+    mkdir -p "$out/bin"
+    ln -s "$out/Applications/${displayname}.app/Contents/MacOS/xpipe" "$out/bin/${pname}"
 
     runHook postInstall
   '';
