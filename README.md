@@ -16,9 +16,7 @@ If you want to use the latest XPipe version instead of an older one in the offic
 
 ## Flake
 
-The intended distribution method are nix flakes if you are not on `x86_64-linux` or want to use the latest XPipe version instead of an older one in the official nixpkgs repo. The flake installs the package using [profiles](https://nix.dev/manual/nix/2.25/package-management/profiles).
-
-Since flakes are flexible, you can also run XPipe without installing it on your system. If you want to give it a try first prior to installing it, you can try running this flake:
+The flake installs the package using [profiles](https://nix.dev/manual/nix/2.25/package-management/profiles). Since flakes are flexible, you can also run XPipe without installing it on your system. If you want to give it a try first prior to installing it, you can try running this flake:
 
 ```
 NIXPKGS_ALLOW_UNFREE=1 nix --extra-experimental-features nix-command --extra-experimental-features flakes run --impure "github:xpipe-io/nixpkg?dir=xpipe"
