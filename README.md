@@ -1,5 +1,11 @@
 # XPipe nixpkgs
 
+## Flake
+
+```
+NIXPKGS_ALLOW_UNFREE=1 nix --extra-experimental-features nix-command --extra-experimental-features flakes profile install --impure github:xpipe-io/nixpkg
+```
+
 Here you can find nixpkgs for XPipe.
 
 To use the derivation, you need to:
