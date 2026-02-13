@@ -41,10 +41,10 @@ let
   }.${system} or throwSystem;
 
   hash = {
-    x86_64-linux = "sha256-V/IpFOhFyydPBVq9rA9H+LwcTcfDl2VTwSFYnFyimYg=";
-    aarch64-linux = "";
-    x86_64-darwin = "";
-    aarch64-darwin = "sha256-rp8OSZYXnMTkaGfTWl964u2lXXb8raewAevAYWYPOPA=";
+    x86_64-linux = "sha256-Rk2KInem0b9kycBvkvV92eAVMGFelGM6tt63e8MrKl8=";
+    aarch64-linux = "sha256-ZZZ9YpTD4tcw64ne89Q7Cgd8qQvhti5tqS+WrNj2+z0=";
+    x86_64-darwin = "sha256-7nsckUR64GIYpCkzAPpYD0uqZLTqP1tJ2ilB/XgCzjY=";
+    aarch64-darwin = "sha256-it6/+az398m1TkIeUbQJP3eeRzc5cgqu7PxI0yKEoko=";
   }.${system} or throwSystem;
 
   displayname = "XPipe PTB";
