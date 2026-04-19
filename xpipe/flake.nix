@@ -23,7 +23,7 @@
     in
     {
       packages = forAllSystems ({ system, pkgs, ... }:
-          pkgs.callPackage ./22.9/default.nix { }
+          pkgs.callPackage ./22.10/default.nix { }
       );
 
       defaultPackage = forAllSystems ({ system, ... }:
